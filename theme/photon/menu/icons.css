@@ -1,6 +1,7 @@
 @media (-moz-proton) {
     /* Padding */
     :root {
+        --arrowpanel-menuicon-padding: 8px;
         --arrowpanel-menublank-padding: calc(var(--arrowpanel-menuicon-padding) * 2 + 8px) !important;
         --arrowpanel-menuimageblank-padding: calc(var(--arrowpanel-menuitem-padding) - 2px) !important;
     }
@@ -299,5 +300,24 @@
 
     #allTabsMenu-containerTabsView .subviewbutton:last-child {
         list-style-image: url(chrome://global/skin/icons/settings.svg);
+    }
+
+    #appMenu-zoom-controls2::before {
+        content: '\A0';
+        width: 16px;
+        height: 16px;
+    }
+
+    #appMenu-library-recentlyClosedTabs,
+    #appmenu-developer-tools-view  .subviewbutton:nth-child(2), /* Task Manager */
+    #appmenu-developer-tools-view  .subviewbutton:nth-child(3), /* Remote Debugging */
+    #appmenu-developer-tools-view  .subviewbutton:nth-child(4),  /* Browser Toolbox */
+    #appmenu-developer-tools-view  .subviewbutton:nth-child(5),  /* Browser Content Toolbox */
+    #appmenu-developer-tools-view  .subviewbutton:nth-last-child(4), /* Responsive Design Mode */
+    #appmenu-developer-tools-view  .subviewbutton:nth-last-child(2), /* Page Source */
+    #appMenu_feedbackPage,
+    #allTabsMenu-containerTabsButton,
+    #allTabsMenu-hiddenTabsButton {
+        list-style-image: url(./blank.svg);
     }
 }
