@@ -1,4 +1,5 @@
 @import url(../photon/tabbar/connect-to-toolbar.css);
+@import url(../photon/tabbar/sound-icon.css);
 
 @media (-moz-proton) {
   /** Darkmode - Color lighter ************************************************/
@@ -284,87 +285,6 @@
   #tabbrowser-tabs[closebuttons=activetab] .tab-label-container[textoverflow][labeldirection="rtl"]:not([pinned]),
   #tabbrowser-tabs[closebuttons=activetab] .tab-label-container[textoverflow]:not([labeldirection]):-moz-locale-dir(rtl):not([pinned]) {
     mask-image: linear-gradient(to left, black 70%, transparent) !important;
-  }
-
-  /** Sound Tab - Hide Label **************************************************/
-  .tab-secondary-label:is([soundplaying], [muted], [activemedia-blocked], [pictureinpicture]){
-    display: none !important;
-  }
-
-  /** Sound Tab - Show with Favicons ******************************************/
-  /* Makes the favicons always visible (also on hover) */
-  .tab-icon-image:not([pinned]){
-    opacity: 1 !important
-  }
-
-  /* Makes the speaker icon to always appear if the tab is playing (not only on hover) */
-  .tab-icon-overlay:not([crashed]),
-  .tab-icon-overlay[pinned][crashed][selected] {
-    /* Position */
-    top: -3.5px !important;
-    inset-inline-end: -9px !important;
-    z-index: 1 !important;
-
-    /* Shape */
-    padding: 1.5px !important;
-    border-radius: 10px !important;
-    width:  17px !important;
-    height: 17px !important;
-  }
-  .tab-icon-overlay:not([sharing], [crashed]):is([soundplaying], [muted], [activemedia-blocked]) {
-    /* Color */
-    color:  currentColor !important;
-    stroke: transparent !important;
-    background: transparent !important;
-    fill-opacity: 0.8 !important;
-    opacity: 1 !important;
-  }
-  .tab-icon-overlay:not([pinned], [sharing], [crashed]):is([soundplaying], [muted], [activemedia-blocked]) {
-    margin-inline-end: 9.5px !important;
-  }
-
-  /* None exist favicon */
-  .tabbrowser-tab:not([image]) .tab-icon-overlay:not([pinned], [sharing],[crashed]) {
-    top: 0 !important;
-    inset-inline-end: 0 !important;
-    margin-inline-end: 5.5px !important;
-    padding: 2px 0 !important;
-  }
-
-  /* Busy - Show */
-  .tab-throbber[busy], .tab-icon-pending[busy] {
-    opacity: 1 !important;
-  }
-
-  /* Busy - Overlay Position */
-  .tabbrowser-tab:not([pinned])[busy] .tab-icon-overlay:is([soundplaying], [muted], [activemedia-blocked]) {
-    transform: translateX(-.5px) translateY(-2.5px);
-  }
-  .tabbrowser-tab:not([image]) .tab-icon-overlay:not([pinned], [sharing],[crashed])[busy] {
-    top: -3.5px !important;
-    inset-inline-end: -9px !important;
-    margin-inline-end: 9.5px !important;
-    padding: 1.5px !important;
-  }
-
-  /* Hover */
-  .tab-icon-overlay:not([crashed])[soundplaying]:hover,
-  .tab-icon-overlay:not([crashed])[muted]:hover,
-  .tab-icon-overlay:not([crashed])[activemedia-blocked]:hover {
-    color:  var(--toolbar-bgcolor, white) !important;
-    stroke: var(--lwt-tab-text, var(--toolbar-color)) !important;
-    background-color: var(--lwt-tab-text, var(--toolbar-color)) !important;
-    fill-opacity: 0.95 !important;
-  }
-
-  #TabsToolbar[brighttext] .tab-icon-overlay:not([crashed])[soundplaying]:hover,
-  #TabsToolbar[brighttext] .tab-icon-overlay:not([crashed])[muted]:hover,
-  #TabsToolbar[brighttext] .tab-icon-overlay:not([crashed])[activemedia-blocked]:hover {
-    color: var(--toolbar-bgcolor, black) !important;
-  }
-
-  .tabbrowser-tab:not([image]) .tab-icon-overlay:not([pinned], [sharing],[crashed]):hover {
-    padding: 0 !important;
   }
 
   /** PictureInPicture Tab - Show PIP Icon ************************************/
