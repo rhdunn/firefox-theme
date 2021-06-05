@@ -1,0 +1,13 @@
+/* Source: https://github.com/ShatteredIcicle/firefox-ui-regression-mending */
+@media (-moz-proton) {
+    /* Show top border line on the selected tab. */
+    .tabbrowser-tab[selected] > .tab-stack {
+        margin-bottom: 0;
+        border: 1px none transparent !important;
+        border-top-color: var(--tabs-border-color) !important;
+        border-top-style: solid !important;
+    }
+    .tab-background[selected="true"] {
+        border-top: 2px solid currentColor !important;
+    }
+}
