@@ -3,3 +3,6 @@
 @import url(theme/photon/tabbar/flat-tabs.css);
 @import url(theme/photon/tabbar/active-tab-highlight.css);
 @import url(theme/photon/tabbar/sound-icon.css);
+
+/* Menu **********************************************************************/
+@import url(theme/photon/menu/icons.css);
