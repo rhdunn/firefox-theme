@@ -1,0 +1,21 @@
+/* Source: https://github.com/ShatteredIcicle/firefox-ui-regression-mending */
+@media (-moz-proton) {
+    /* First tab should be touching the left screen edge
+       but in Proton it is a few pixels right leaving blank space. */
+    .tabbrowser-tab[first-visible-tab] {
+        padding-inline-start: 0 !important;
+    }
+
+    /* Remove unnecessary padding that was not there before. */
+    .tabbrowser-tab {
+        padding-inline: 0 !important;
+    }
+
+    /* Other tab related changes like height, touching the bar. */
+    :root {
+        --tab-min-height: 32px !important; /* Height from before photon. */
+        --proton-tab-block-margin: 0 !important; /* Tabs should touch the bar. */
+        --tab-shadow-max-size: 0 !important; /* Leftmost tab when unselected is closer to the left. */
+        --tab-border-radius: 0 !important; /* Remove rounded corners. */
+    }
+}
