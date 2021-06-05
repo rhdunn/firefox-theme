@@ -1,0 +1,23 @@
+@media (-moz-proton) {
+    /** Tab Bar - Connect to toolbar *****************************************/
+
+    .tab-background {
+        border-radius: var(--tab-border-radius) var(--tab-border-radius) 0 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    .tab-content {
+        margin-top: var(--proton-tab-block-margin);
+    }
+
+    .tab-stack {
+        margin-top:    0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    /** Selected Tab - Color like toolbar ************************************/
+
+    #tabbrowser-tabs:not([movingtab]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab > .tab-stack > .tab-background[multiselected="true"]:-moz-lwtheme, #tabbrowser-tabs:not([movingtab]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab > .tab-stack > .tab-background[selected="true"]:-moz-lwtheme {
+        background-image: linear-gradient(var(--toolbar-bgcolor, transparent), var(--toolbar-bgcolor, transparent)), linear-gradient(var(--toolbar-bgcolor), var(--toolbar-bgcolor)), var(--lwt-header-image, none) !important;
+    }
+}

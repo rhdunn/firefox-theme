@@ -1,3 +1,5 @@
+@import url(../photon/tabbar/connect-to-toolbar.css);
+
 @media (-moz-proton) {
   /** Darkmode - Color lighter ************************************************/
   :root[style*="--lwt-accent-color:rgb(12, 12, 13); --lwt-text-color:rgba(249, 249, 250);"] {
@@ -161,28 +163,7 @@
     background-position-y: bottom calc(.5px + var(--tabs-navbar-shadow-size)) !important;
   }
 
-  /** Tab Bar - Connect to window *********************************************/
-  .tab-background {
-    border-radius: var(--tab-border-radius) var(--tab-border-radius) 0px 0px !important;
-    margin-bottom: 0px !important;
-  }
-
-  .tab-content {
-    margin-top: var(--proton-tab-block-margin);
-  }
-
-  .tab-stack {
-    margin-top:    0px !important;
-    margin-bottom: 0px !important;
-  }
-
   /** Selected Tab - Color like toolbar ***************************************/
-  #tabbrowser-tabs:not([movingtab]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab > .tab-stack > .tab-background[multiselected="true"]:-moz-lwtheme, #tabbrowser-tabs:not([movingtab]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab > .tab-stack > .tab-background[selected="true"]:-moz-lwtheme {
-    /* Original: linear-gradient(var(--lwt-selected-tab-background-color, transparent), var(--lwt-selected-tab-background-color, transparent)), linear-gradient(var(--toolbar-bgcolor), var(--toolbar-bgcolor)), var(--lwt-header-image, none)
- */
-    background-image: linear-gradient(var(--toolbar-bgcolor, transparent), var(--toolbar-bgcolor, transparent)), linear-gradient(var(--toolbar-bgcolor), var(--toolbar-bgcolor)), var(--lwt-header-image, none) !important;
-  }
-
 
   /* Multi Selected Color */
   .tab-background[multiselected="true"]:not([selected="true"]) > .tab-loading-burst.proton:not([bursting]) {
@@ -583,7 +564,7 @@
   :root[uidensity=compact] menupopup > menuitem, menupopup > menu {
     padding-block: 0.25em !important; /* Original: 0.5em */
   }
-  
+
   /** Panel - View ************************************************************/
   :root #appMenu-popup panelview {
     width: 25em !important; /* can modify panel width, Original: 22.5em */
